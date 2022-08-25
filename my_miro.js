@@ -115,8 +115,6 @@ createSumBtn = () => {
 const SUBTITLE_REGEX = /^# /
 
 createCards = async () => {
-  console.log("createCards called!")
-  // const targets = await searchItems({type: "card", title: "createCard"})
   const targets = await window.miro.board.getSelection()
   
   for(let target of targets) {
@@ -140,8 +138,6 @@ createCards = async () => {
         x: target.x,
         y: y,
       })
-
-      console.log("create card done!", new_card)
 
       y += new_card.height
     }
@@ -188,8 +184,6 @@ createGoogleIcon = (name) => {
 window.addEventListener("load", (event) => {  
   
   initialize = () => {
-    console.log(window.miro)
-
     const sum_btn = createSumBtn()
     confirmExistance(sum_btn, appendPannelBtn)
 
