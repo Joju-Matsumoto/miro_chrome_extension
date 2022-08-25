@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "my miro sdk extension",
+    "short_name": "mymiro",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": ["https://miro.com/app/board/*"],
+            "js": ["inject.js", "google_icon.js"]
+        }
+    ],
+    "web_accessible_resources": [{ 
+        "resources": ["my_miro.js"],
+        "matches": ["https://*/*"]
+    }]
+}
