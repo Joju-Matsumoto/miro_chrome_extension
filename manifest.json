@@ -6,7 +6,7 @@
     "content_scripts": [
         {
             "matches": ["https://miro.com/app/board/*"],
-            "js": ["inject.js", "google_icon.js"]
+            "js": ["inject.js"]
         }
     ],
     "web_accessible_resources": [{ 
